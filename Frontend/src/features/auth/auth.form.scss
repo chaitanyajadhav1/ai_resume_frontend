@@ -10,6 +10,32 @@ main{
         min-width: 350px;
     }
 
+    .error-message {
+        background: rgba(239, 68, 68, 0.12);
+        border: 1px solid rgba(239, 68, 68, 0.35);
+        border-radius: 0.5rem;
+        padding: 0.65rem 1rem;
+        margin-bottom: 1rem;
+        color: #f87171;
+        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        animation: shakeIn 0.35s ease-out;
+
+        .error-icon {
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+    }
+
+    @keyframes shakeIn {
+        0% { transform: translateX(-8px); opacity: 0; }
+        40% { transform: translateX(4px); }
+        70% { transform: translateX(-2px); }
+        100% { transform: translateX(0); opacity: 1; }
+    }
+
     .input-group{
         display: flex;
         flex-direction: column;
